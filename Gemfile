@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'rails', '>=3.2.11'
+gem 'rails', '~>3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -12,15 +12,17 @@ gem 'active_attr'
 gem 'puma'
 gem 'pg'
 
+gem "httparty"
+
 group :production do
-  gem 'rails_log_stdout', git: 'git://github.com/threadedlabs/rails_log_stdout.git'
+  gem 'rails_log_stdout', '0.1.1'  #, git: 'git://github.com/threadedlabs/rails_log_stdout.git'
   gem 'rpm_contrib'
 end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'pry-rails'
-  gem 'pry-nav'
+  #gem 'pry-rails'
+  #gem 'pry-nav'
 end
 
 # To use ActiveModel has_secure_password
